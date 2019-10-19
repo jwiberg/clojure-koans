@@ -1,2 +1,7 @@
-(let [ab-adder (partial concat [:a :b])]
-  (ab-adder [[1 2] [3 4]]))
+(defn factorial [n]
+  (loop [n n acc n]
+    (if (= n 1)
+      acc
+      (recur (dec n) (* acc (dec n))))))
+
+(factorial 10)
